@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.myatejx.test.test_json.JsonTestActivity.ClickProxy"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_list_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="输入list size"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btn_test_native_json"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->click.testNativeJson()}"
+            android:text="测试原生Json"/>
+
+        <Button
+            android:id="@+id/btn_test_gson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->click.testGson()}"
+            android:text="测试Gson"/>
+
+        <Button
+            android:id="@+id/btn_test_fastjson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->click.testFastJson()}"
+            android:text="测试fastJson"/>
+
+        <Button
+            android:id="@+id/btn_test_logansquare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->click.testLoganSquare()}"
+            android:text="测试LoganSquare"/>
+
+        <TextView
+            android:id="@+id/tv_test_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"/>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.myatejx.testandroid.MainActivity.ClickProxy"/>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="数据交互"/>
+
+            <Button
+                android:id="@+id/btn_test_json"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->click.testJson()}"
+                android:text="测试Json"/>
+
+            <Button
+                android:id="@+id/btn_test_database"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->click.testDatabase()}"
+                android:text="测试database"/>
+
+            <!--<Button
+                android:id="@+id/btn_test_fastjson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->click.testFastJson()}"
+                android:text="测试fastJson"/>-->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,88 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+//apply plugin: 'com.neenbedankt.android-apt'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+
+}
+
+/*greendao {
+    schemaVersion 1
+    daoPackage 'com.myatejx.test.db.greendao.gen'
+    targetGenDir 'src/main/java'
+}*/
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs', '../architecture/libs', '../helper/libs'
+    }
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
+    compile "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    testCompile 'junit:junit:4.12'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile 'org.greenrobot:greendao-generator:3.2.2'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.alibaba:fastjson:1.1.68.android'
+
+    //apt会与databinding冲突，因此此处改为annotationProcessor，并需要移除上方的apply plugin和classpath
+    // https://blog.csdn.net/qq_33337504/article/details/78110798
+    annotationProcessor 'com.bluelinelabs:logansquare-compiler:1.3.6'
+    compile 'com.bluelinelabs:logansquare:1.3.6'
+
+    compile 'io.reactivex.rxjava2:rxjava:' + rootProject.rxAndroidVersion
+    compile 'io.reactivex.rxjava2:rxandroid:' + rootProject.rxAndroidVersion
+
+
+}

@@ -1,0 +1,1 @@
+include ':app', ':io_test', ':ui_test', ':archi_test'
