@@ -1,4 +1,4 @@
-package com.myatejx.test.test_image.contract;
+package com.myatejx.test.test_media.contract;
 
 /**
  * Created by admin on 2018/4/12.

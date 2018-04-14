@@ -1,4 +1,4 @@
-package com.myatejx.test.test_image.test;
+package com.myatejx.test.test_media.test;
 
 import com.myatejx.test.bean.TestEntity;
 import com.myatejx.test.test_json.contract.JsonParserType;
