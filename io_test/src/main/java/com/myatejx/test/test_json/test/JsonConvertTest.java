@@ -1,6 +1,11 @@
 package com.myatejx.test.test_json.test;
 
+import android.content.Context;
+
+import com.alibaba.fastjson.JSON;
+import com.myatejx.test.R;
 import com.myatejx.test.bean.TestEntity;
+import com.myatejx.test.bean.record.RecordGroup;
 import com.myatejx.test.test_json.contract.JsonParserType;
 import com.myatejx.test.test_json.convert.FastJsonConvert;
 import com.myatejx.test.test_json.convert.GsonConvert;
@@ -86,6 +91,13 @@ public class JsonConvertTest {
                 + "测试list转json数组: " + (list2JsonArrayEndTime - list2JsonArrayStartTime) + "ms\n"
                 + "测试json转单一对象: " + (jsonObj2ObjEndTime - jsonObj2ObjStartTime) + "ms\n"
                 + "测试json数组转list: " + (jsonArray2ListEndTime - jsonArray2ListStartTime) + "ms\n";
+    }
+
+    public void testComplexJson(Context context) {
+        String json = context.getString(R.string.test_complex_json);
+        List<RecordGroup> recordGroups = JSON.parseArray(json, RecordGroup.class);
+
+
     }
 
 }

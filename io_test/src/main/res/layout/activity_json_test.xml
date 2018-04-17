@@ -51,6 +51,13 @@
             android:onClick="@{()->click.testLoganSquare()}"
             android:text="测试LoganSquare"/>
 
+        <Button
+            android:id="@+id/btn_test_complex_json"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->click.testComplexJson()}"
+            android:text="测试复杂Json"/>
+
         <TextView
             android:id="@+id/tv_test_result"
             android:layout_width="wrap_content"

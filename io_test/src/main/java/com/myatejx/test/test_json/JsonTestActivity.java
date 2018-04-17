@@ -69,5 +69,20 @@ public class JsonTestActivity extends AppCompatActivity {
             });
         }
 
+        public void testComplexJson() {
+            Observable.create(new ObservableOnSubscribe<String>() {
+                @Override
+                public void subscribe(ObservableEmitter<String> e) throws Exception {
+                    mConvertTest.testComplexJson(getApplicationContext());
+                    e.onNext(null);
+                }
+            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<String>() {
+                @Override
+                public void accept(String s) throws Exception {
+
+                }
+            });
+        }
+
     }
 }

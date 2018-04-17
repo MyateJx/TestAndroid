@@ -29,7 +29,7 @@ public class LiveDataTestActivity extends AppCompatActivity {
         mBinding.setClick(new ClickProxy());
         mBinding.etListSize.setText("3");
         mAdapter = new TestEntityAdapter();
-        mBinding.rv.setAdapter();
+//        mBinding.rv.setAdapter();
 
         mViewModel = ViewModelProviders.of(this).get(TestEntityViewModel.class);
 

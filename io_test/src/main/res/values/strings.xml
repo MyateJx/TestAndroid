@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Test</string>
+
+    <string name="test_complex_json">[{"alias":"实地地类","sequence":1,"items":[{"sequence":1,"defaultVisible":"true","name":"WYDHDL","alias":"外业调绘地类","fields":[{"code":"0101","value":"0101-水田"},{"code":"0102","value":"0102-xxx"}],"relatives":[{"fieldSelected":"0101","affectName":"DCBZ","necessary":"false","visible":"true","fields":[{"code":"0101","value":"0101-水田"},{"code":"0102","value":"0102-xxx"}]},{"fieldSelected":"0101","affectName":"GDLX","necessary":"false","visible":"true"}]},{"sequence":2,"defaultVisible":"false","name":"DCBZ","alias":"调查标注","fields":[{"code":"WG","value":"WG-未耕种"},{"code":"GZ","value":"GZ-耕种"}]}]},{"alias":"外业调查信息","items":[{"name":"TBBJ","alias":"图斑边界","fields":[{"code":"BC","value":"BC-补测"},{"code":"0102","value":"0102-xxx"}]}]}]</string>
+
 </resources>
