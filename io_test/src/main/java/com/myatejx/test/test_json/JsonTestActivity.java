@@ -6,9 +6,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.myatejx.test.R;
+import com.myatejx.test.bean.record.RecordGroup;
 import com.myatejx.test.databinding.ActivityJsonTestBinding;
 import com.myatejx.test.test_json.contract.JsonParserType;
 import com.myatejx.test.test_json.test.JsonConvertTest;
+
+import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -70,15 +73,15 @@ public class JsonTestActivity extends AppCompatActivity {
         }
 
         public void testComplexJson() {
-            Observable.create(new ObservableOnSubscribe<String>() {
+            Observable.create(new ObservableOnSubscribe<List<RecordGroup>>() {
                 @Override
-                public void subscribe(ObservableEmitter<String> e) throws Exception {
-                    mConvertTest.testComplexJson(getApplicationContext());
-                    e.onNext(null);
+                public void subscribe(ObservableEmitter<List<RecordGroup>> e) throws Exception {
+                    List<RecordGroup> groups = mConvertTest.testComplexJson(getApplicationContext());
+                    e.onNext(groups);
                 }
-            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<String>() {
+            }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<List<RecordGroup>>() {
                 @Override
-                public void accept(String s) throws Exception {
+                public void accept(List<RecordGroup> s) throws Exception {
 
                 }
             });

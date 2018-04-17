@@ -93,11 +93,10 @@ public class JsonConvertTest {
                 + "测试json数组转list: " + (jsonArray2ListEndTime - jsonArray2ListStartTime) + "ms\n";
     }
 
-    public void testComplexJson(Context context) {
+    public List<RecordGroup> testComplexJson(Context context) {
         String json = context.getString(R.string.test_complex_json);
         List<RecordGroup> recordGroups = JSON.parseArray(json, RecordGroup.class);
-
-
+        return recordGroups;
     }
 
 }
