@@ -1,1 +1,5 @@
-include ':app', ':io_test', ':ui_test', ':archi_test', ':testapp2'
+include ':app',
+        ':io_test',
+        ':ui_test',
+//        ':archi_test',
+        ':testapp2'

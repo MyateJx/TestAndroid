@@ -29,30 +29,32 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
-    compile "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
-    compile "com.android.support:design:$supportLibraryVersion"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    implementation "com.android.support:design:$supportLibraryVersion"
 
-    testCompile 'junit:junit:4.12'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-    compile "org.greenrobot:eventbus:$eventbusVersion"
+
+    implementation "org.greenrobot:eventbus:$eventbusVersion"
 
     //android architecture compenent
 
-    compile "android.arch.persistence.room:runtime:$roomVersion"
-    compile "android.arch.persistence.room:compiler:$roomVersion"
-    compile "android.arch.persistence.room:rxjava2:$roomVersion"
-    compile "android.arch.persistence.room:testing:$roomVersion"
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+//    implementation "android.arch.persistence.room:compiler:$roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
+    implementation "android.arch.persistence.room:rxjava2:$roomVersion"
+//    implementation "android.arch.persistence.room:testing:$roomVersion"
 
-    compile "android.arch.lifecycle:runtime:$lifecycleVersion"
-    compile "android.arch.lifecycle:extensions:$lifecycleVersion"
-    compile "android.arch.lifecycle:common-java8:$lifecycleVersion"
-    compile "android.arch.lifecycle:compiler:$lifecycleVersion"
+    implementation "android.arch.lifecycle:runtime:$lifecycleVersion"
+    implementation "android.arch.lifecycle:extensions:$lifecycleVersion"
+    implementation "android.arch.lifecycle:common-java8:$lifecycleVersion"
+//    implementation "android.arch.lifecycle:compiler:$lifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$lifecycleVersion"
 
-    compile "android.arch.core:core-testing:$arch_coreVersion"
+//    implementation "android.arch.core:core-testing:$arch_coreVersion"
 
 }
