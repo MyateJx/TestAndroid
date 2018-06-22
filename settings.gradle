@@ -1,5 +1,6 @@
 include ':app',
         ':io_test',
         ':ui_test',
+        ':bus_test'
 //        ':archi_test',
-        ':testapp2'
+//        ':testapp2'
