@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+        <variable
+            name="clickProxy"
+            type="com.myatejx.bus_test.test_intent.TestIntentActivity.ClickProxy"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/tv_start_by_explicit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->clickProxy.startByExplicit()}"
+            android:text="显式intent启动组件"/>
+
+        <Button
+            android:id="@+id/tv_start_by_implicit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->clickProxy.startByImplicit()}"
+            android:text="隐式intent启动组件"/>
+
+        <Button
+            android:id="@+id/tv_force_show_matched"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->clickProxy.forceShowMatched()}"
+            android:text="强制显式匹配组件的列表"/>
+
+    </LinearLayout>
+</layout>

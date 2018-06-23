@@ -10,12 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".test_intent.TestIntentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".test_intent.TestResultActivity">
+            <intent-filter>
+                <action android:name="com.myatejx.bus_test.action.START_RESULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.myatejx.bus_test.category.START_RESULT"/>
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
