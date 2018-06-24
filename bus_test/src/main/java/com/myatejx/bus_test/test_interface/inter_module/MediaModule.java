@@ -1,4 +1,8 @@
-package com.myatejx.bus_test.test_interface;
+package com.myatejx.bus_test.test_interface.inter_module;
+
+import com.myatejx.bus_test.test_interface.inter_module.interfaces.IGpsListener;
+import com.myatejx.bus_test.test_interface.inter_module.interfaces.IRotationCallback;
+import com.myatejx.bus_test.test_interface.inter_module.interfaces.MediaInterfaceBridge;
 
 /**
  * Created by Administrator on 2018/6/22.
