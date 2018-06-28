@@ -86,6 +86,9 @@ public class TestIntentActivity extends AppCompatActivity {
             forceShowComponentList();
         }
 
+        public void toTestCommonIntent() {
+            startActivity(new Intent(TestIntentActivity.this, TestCommonIntentActivity.class));
+        }
     }
 
 }

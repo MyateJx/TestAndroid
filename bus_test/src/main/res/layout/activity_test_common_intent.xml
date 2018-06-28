@@ -20,21 +20,18 @@
             android:id="@+id/tv_start_by_explicit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()->clickProxy.startByExplicit()}"
             android:text="显式intent启动组件"/>
 
         <Button
             android:id="@+id/tv_start_by_implicit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()->clickProxy.startByImplicit()}"
             android:text="隐式intent启动组件"/>
 
         <Button
             android:id="@+id/tv_force_show_matched"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()->clickProxy.forceShowMatched()}"
             android:text="强制显式匹配组件的列表"/>
 
     </LinearLayout>

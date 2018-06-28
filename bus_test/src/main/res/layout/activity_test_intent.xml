@@ -37,5 +37,12 @@
             android:onClick="@{()->clickProxy.forceShowMatched()}"
             android:text="强制显式匹配组件的列表"/>
 
+        <Button
+            android:id="@+id/tv_to_test_common_intent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->clickProxy.toTestCommonIntent()}"
+            android:text="跳转到测试通用intent的页面"/>
+
     </LinearLayout>
 </layout>

@@ -21,11 +21,12 @@
         <activity android:name=".test_intent.TestResultActivity">
             <intent-filter>
                 <action android:name="com.myatejx.bus_test.action.START_RESULT"/>
-                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="com.myatejx.bus_test.category.START_RESULT"/>
             </intent-filter>
         </activity>
-
+        <activity android:name=".test_intent.TestCommonIntentActivity"/>
     </application>
 
 </manifest>
