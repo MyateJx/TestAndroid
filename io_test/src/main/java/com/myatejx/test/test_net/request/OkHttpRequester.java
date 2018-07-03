@@ -6,5 +6,5 @@ package com.myatejx.test.test_net.request;
 
 public class OkHttpRequester {
 
-    
+
 }

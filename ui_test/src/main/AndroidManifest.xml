@@ -1,2 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.myatejx.ui_test"/>
+          package="com.myatejx.ui_test">
+
+    <application>
+        <activity
+            android:name=".OneActivity"
+            android:label="@string/title_activity_one"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".TwoActivity"
+            android:label="@string/title_activity_two"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+    </application>
+
+</manifest>

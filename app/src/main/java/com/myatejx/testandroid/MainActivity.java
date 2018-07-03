@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.myatejx.test.test_database.DatabaseTestActivity;
 import com.myatejx.test.test_json.JsonTestActivity;
 import com.myatejx.testandroid.databinding.ActivityMainBinding;
+import com.myatejx.ui_test.OneActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,5 +37,8 @@ public class MainActivity extends AppCompatActivity {
 //            startActivity(new Intent(MainActivity.this, LiveDataTestActivity.class));
         }
 
+        public void testAnimetor() {
+            startActivity(new Intent(MainActivity.this, OneActivity.class));
+        }
     }
 }

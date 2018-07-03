@@ -47,6 +47,18 @@
                 android:onClick="@{()->click.testFastJson()}"
                 android:text="测试fastJson"/>-->
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="界面交互"/>
+
+            <Button
+                android:id="@+id/btn_test_animetor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->click.testAnimetor()}"
+                android:text="测试animetor"/>
 
         </LinearLayout>
 

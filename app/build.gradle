@@ -52,4 +52,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation project(':io_test')
 //    implementation project(':archi_test')
+    compile project(path: ':ui_test')
 }
